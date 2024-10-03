@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="sidebar">
+        <ul>
+            <li>
+                <span class="logo">Myself</span>
+                <button onclick=toogleSidebar() id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg>
+                </button>
+            </li>
+
+            <li class="active">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                    </svg>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M560-320h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H447l-80-80H160v480Zm0 0v-480 480Z" />
+                    </svg>
+                    <span>Create</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path d="M480-360 280-560h400L480-360Z" />
+                    </svg>
+                </button>
+                <ul class="submenu">
+                    <div>
+                        <li><a href="#">Folder</a></li>
+                        <li><a href="#">Document</a></li>
+                        <li><a href="#">Project</a></li>
+                    </div>
+
+                </ul>
+            </li>
+
+            <li>
+                <button onclick=toggleSubMenu(this) class="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M222-200 80-342l56-56 85 85 170-170 56 57-225 226Zm0-320L80-662l56-56 85 85 170-170 56 57-225 226Zm298 240v-80h360v80H520Zm0-320v-80h360v80H520Z" />
+                    </svg>
+                    <span>Todo-Lists</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path d="M480-360 280-560h400L480-360Z" />
+                    </svg>
+                </button>
+                <ul class="submenu">
+                    <div>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Private</a></li>
+                        <li><a href="#">Coding</a></li>
+                        <li><a href="#">Gardening</a></li>
+                        <li><a href="#">School</a></li>
+                    </div>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                    </svg>
+                    <span>Calender</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#e8eaed">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                    </svg>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h2>Hello World</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos aut tempore a et? Corrupti sint
+                aliquam, sequi distinctio ipsum, eum minus soluta iusto ut officiis nulla atque enim sunt et.
+                Commodi pariatur iusto libero ducimus ipsam ad iste tempore, eum consequatur ratione exercitationem
+                obcaecati deleniti! Deserunt mollitia nostrum necessitatibus beatae dolore aperiam blanditiis, natus
+                eligendi voluptas fuga tempora saepe. Esse.
+                Necessitatibus harum sequi illum eveniet, alias quam voluptatibus sit provident unde molestias cumque
+                dolores ex consectetur cum libero, voluptate repudiandae in labore maiores fugit dicta? Eius illum nemo
+                qui
+                animi.</p>
+        </div>
+
+        <div class="container">
+            <h2>Example Heading</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure sit adipisci quasi.
+                Voluptatibus
+                minima ex tenetur officia adipisci repudiandae quaerat in similique dicta consectetur, nemo velit
+                consequatur deserunt? Repellendus!
+                Officia saepe doloremque distinctio dolor hic corrupti error laudantium iure cumque assumenda. Fugiat et
+                suscipit neque quae molestias accusamus, incidunt nostrum cupiditate odit, similique totam eum? Vero
+                quisquam nihil nemo?
+                Saepe vero possimus eius. Quam at minima rem animi, nam nihil facere modi ullam? Porro, voluptatem modi!
+                Amet nostrum pariatur minus autem vitae reiciendis fuga? Nisi ullam ut ea modi.
+                Qui, inventore debitis voluptate perferendis aspernatur sapiente, reprehenderit voluptatem culpa,
+                laboriosam
+                eaque beatae nihil tempora unde reiciendis! Animi rem autem cum asperiores eaque corporis quis rerum
+                natus
+                non! Labore, ipsum?
+                Repudiandae recusandae quibusdam ipsa soluta eius voluptatibus totam tempore, officiis quisquam iusto
+                veritatis adipisci atque debitis? Molestiae pariatur rerum asperiores vitae aspernatur? Magnam id,
+                dolores
+                quod dicta eos repellat expedita.</p>
+        </div>
+
+        <div class="container">
+            <h2>Example Heading2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae, est atque natus pariatur non
+                dolore
+                omnis vero, eligendi, voluptatem eum enim sapiente in repellat iste quae doloribus porro illo!
+                Quam laboriosam assumenda quae. Excepturi nostrum tenetur voluptate delectus, labore et dignissimos
+                fugit!
+                Repellat magni ab sapiente unde cumque distinctio asperiores, quisquam earum natus modi culpa animi
+                temporibus, itaque explicabo!
+                Corrupti facilis error distinctio aut inventore? Autem, modi laudantium aliquam enim similique ipsa
+                repellat
+                deserunt veritatis beatae harum voluptatum labore voluptates nulla amet dolorem tenetur recusandae
+                suscipit
+                dolore. Architecto, vero?
+                Dolor aut blanditiis ipsum voluptate autem. Ad dolorem asperiores fugiat recusandae deserunt. Dolor eum
+                blanditiis vitae consequuntur ullam esse et deleniti aspernatur nesciunt numquam! Beatae molestiae
+                inventore
+                voluptatibus vitae dolores.
+                Tempora error debitis cumque asperiores voluptas inventore, harum provident nobis ratione repudiandae
+                tenetur nisi quos illum cum, sequi nostrum aspernatur minima quam maxime dolore fugiat? Inventore
+                obcaecati
+                repudiandae necessitatibus placeat.
+                Odio, iure. Sed repellendus distinctio, eaque placeat quidem exercitationem consequuntur sequi alias id
+                voluptatum. Cum dolor animi quae voluptate magni recusandae ea voluptas voluptates. Soluta porro maiores
+                debitis error eius.
+                Consequatur enim fugiat corrupti similique culpa dolor est cum saepe exercitationem laudantium quo
+                laboriosam velit eum sint, unde tenetur at, laborum voluptatum eius pariatur. Quo commodi iusto
+                asperiores
+                at dignissimos.</p>
+        </div>
+    </main>
+    <div class="ads">
+        
+    </div>
+    <script src="index.js" defer></script>
+</body>
+
+</html> 
